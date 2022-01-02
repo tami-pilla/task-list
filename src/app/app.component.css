@@ -1,0 +1,117 @@
+
+.container {
+    width: 45rem;
+    max-width: 100%;
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+    border: 5px solid lightgreen;
+    border-radius: 6px;
+}
+
+.container button {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: white;
+    height: 2.5rem;
+    background-color: green;
+}
+
+
+
+form div {
+    margin-left: 3rem;
+}
+
+form div:first-child input {
+    width: 20rem;
+}
+
+form div:nth-child(2)   input {
+    width: 15rem;
+}
+
+.form-control {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+}
+
+
+@media only screen and (max-width: 992px) {
+    
+    .container {
+        width: 30rem;
+    }
+
+    .container button {
+        color: white;
+        display: inline;
+        width: 6rem;
+        height: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+
+    form div input {
+        margin-top: 0.3rem;
+    }
+
+    form div:nth-child(2) input {
+        width: 20rem;
+    }
+
+    form div:nth-child(2) label {
+        margin-top: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+   
+    .container {
+        width: 25rem;
+    }
+
+    .container button {
+        display: inline;
+        width: 6rem;
+        height: 2.3rem;
+        margin-top: 1.5rem;
+    }
+
+    form div:first-child input {
+        width: 15rem;
+    }
+
+    form div:nth-child(2) input {
+        width: 15rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .container {
+        width: 18rem;
+    }
+
+    .container button {
+        display: inline;
+        width: 6rem;
+        height: 2.3rem;
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+
+    form div {
+        margin-left: 1rem;
+    }
+
+    form div:first-child input {
+        width: 14rem;
+    }
+
+    form div:nth-child(2) input {
+        width: 14rem;
+    }
+}

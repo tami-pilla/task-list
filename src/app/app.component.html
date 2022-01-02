@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="row">
+        <div class="d-flex flex-column align-items-center flex-lg-row justify-content-lg-around">
+            <h1>{{titulo}}</h1>
+            <button class="btn" type="submit" (click)="addTask()" [disabled]="!inputTarea || !inputDia">Add Task!</button>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="row d-flex flex-column align-items-center flex-lg-row">
+        <form class="form-group d-flex flex-column  flex-lg-row">
+
+            <div class="d-flex flex-column">
+                <label for="tarea">Task:</label>
+                <input type="text" name="tarea" id="tarea" class="form-control" [(ngModel)]="inputTarea">
+            </div>
+
+            <div class="d-flex flex-column">
+                <label for="dia">Date:</label>
+                <input type="datetime-local" name="dia" id="dia" class="form-control dateInput" [(ngModel)]="inputDia">
+            </div>
+        </form>
+    </div>
+
+    <br><br>
+
+    <app-task-list  *ngFor="let tarea of tareas let i = index" [tareaLista]="tarea" [indice]="i"></app-task-list>
+
+
+</div>

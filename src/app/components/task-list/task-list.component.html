@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="task-list">
+        <div class="task-item d-flex justify-content-between" [class.terminada]="tareaLista.terminada">
+            <div class="d-flex">
+                <p class="indice">{{indice + 1}})</p>
+
+                <div class="ms-2 mt-1">
+                    <h6 [class.terminadaTachado]="tareaLista.terminada">{{tareaLista.nombre}}</h6>
+                    <p>{{tareaLista.dia | date : "fullDate"}}</p>
+
+                    <label for="terminada" class="me-2">Finished:</label>
+                    <input type="checkbox" name="terminada" [(ngModel)]="tareaLista.terminada" (change)="tareaTerminada()">
+                    <!-- ngModel del checkbox va a indicar si la tarea esta terminada o no -->
+                    <!-- El evento change indica si se marca o desmarca la tarea. Al marcar una tarea el array se modifica-->
+                </div>
+            </div>
+
+         
+            <fa-icon [icon]="faTimes" [ngStyle] = "{'color' : 'red', 'cursor' : 'pointer'}" (click)="eliminarTarea(tareaLista)"></fa-icon>
+           
+        </div>
+    </div>
+</div>

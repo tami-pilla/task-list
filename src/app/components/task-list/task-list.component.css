@@ -1,0 +1,72 @@
+.task-list {
+    padding: 1rem 3rem;
+}
+
+.task-item {
+    background-color: rgba(236, 236, 236, 0.5);
+    padding: 1rem;
+    border-left: 5px solid lightgreen;
+    margin-bottom: 1rem;
+}
+
+.indice {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.task-item div div h6 {
+    font-size: 1.2rem;
+}
+
+.task-item div div p {
+    font-size: 0.9rem;
+}
+
+.terminada {
+    background-color: lightgreen;
+}
+
+.terminadaTachado {
+    text-decoration: line-through;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .task-list {
+        padding: 1rem 2.5rem;
+    }
+
+    .task-item {
+        width: 18rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .task-list {
+        padding: 1rem 1rem;
+    }
+
+    .task-item {
+        width: 15rem;
+    }
+
+ .indice {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.task-item div div h6 {
+    font-size: 1rem;
+}
+
+.task-item div div p {
+    font-size: 0.8rem;
+}
+
+.task-item label {
+    font-size: 0.8rem;
+}
+
+}
