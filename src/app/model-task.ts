@@ -1,6 +1,6 @@
 //se crea la clase con el modelo para construir/abstraer tareas
 export class Task {
-  splice(tareaLista: Task, arg1: number) {
+   splice(indice: number, numero:number) {
     
   }
 

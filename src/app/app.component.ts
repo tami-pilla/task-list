@@ -1,6 +1,8 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 
 import { Task } from './model-task';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { TaskServiceService } from './services/task-service.service';
 
@@ -12,14 +14,22 @@ import { TaskServiceService } from './services/task-service.service';
   styleUrls: ['./app.component.css']
 })
 
+
+
 export class AppComponent {
 
   titulo: string = "My To-Do List";
 
+  faTimes = faTimes;
+
   constructor(private miServicio: TaskServiceService) { }
 
+  tarea: Task;
+  i:number;
+  
   tareas: Task[] = [
   ];
+
 
   //la info de los input se van a almacenar en estas variables
   inputTarea: string = "";
@@ -39,6 +49,7 @@ export class AppComponent {
     // se limpian los input para hacer una nueva entrada
     this.inputTarea = "";
     this.inputDia = "";
+    console.log(this.tareas)
   }
 
 

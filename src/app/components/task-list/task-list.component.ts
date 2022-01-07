@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 
 import { Task } from 'src/app/model-task';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { TaskServiceService } from 'src/app/services/task-service.service';
 
@@ -11,15 +12,23 @@ import { TaskServiceService } from 'src/app/services/task-service.service';
 })
 export class TaskListComponent implements OnInit {
 
-  @Input() tareaLista: Task;
-  @Input() indice: number;
+
+ @Input() tareaLista: Task;
+ @Input() indice: number;
+ 
 
   faTimes = faTimes;
 
   constructor(private miServicio: TaskServiceService) { }
 
-  tareas: Task[] = [
-  ];
+  tareas: Task[] = [];
+
+
+  
+  //Esta funcion va a obtener las tareas a traves del servicio y las va a guardar en el array this.tareas
+  obtenerTareas() {
+    this.tareas = this.miServicio.obtenerTareas();
+  }
 
 
   tareaTerminada() {
@@ -31,34 +40,21 @@ export class TaskListComponent implements OnInit {
     this.miServicio.obtenerTareas();
   }
 
-  //  eliminarTarea(tareaLista: Task) {
-  //  console.log(tareaLista)
-  //  }
 
-  // eliminarTarea(tareaLista: Task) {
-  //   // Primero le preguntamos al usuario  
-  //   const confirma = confirm("¿Realmente quiere eliminar la tarea?");
-  //   if (!confirma) {
-  //     return;
-  //   }
+   eliminarTarea(tareaLista: Task, indice: number) {
 
-  //   this.tareaLista.splice(tareaLista, 1);
-  //   console.log(this.tareas)
-
-  //   this.miServicio.guardarTareas(this.tareas);
-    
-  // }
-
-
-
-  //  eliminarTarea(indice: number) {
-  //    let text = "¿Realmente quiere eliminar la tarea?";
-  //    if (confirm(text) == true) {
-  //     this.tareas.splice(indice, 1)
-  //   }
-  //    console.log(this.tareas)
-  //    this.miServicio.guardarTareas(this.tareas);
-  //  }
+     console.log(this.tareaLista);
+     console.log(this.indice);
+     console.log(this.tareas);
+ 
+      let text = "¿Realmente quiere eliminar la tarea?";
+      if (confirm(text) == true) {   
+      this.tareas.splice(indice, 1)
+     }
+     console.log(this.tareas);
+      this.miServicio.obtenerTareas()
+     this.miServicio.guardarTareas(this.tareas);
+   }
 
 
 
