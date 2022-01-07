@@ -1,8 +1,47 @@
+
+.container {
+    width: 30rem;
+    max-width: 100%;
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+    border: 5px solid lightgreen;
+    border-radius: 6px;
+}
+
+.container button {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: white;
+    height: 2.5rem;
+    background-color: green;
+    margin-top: 1rem;
+}
+
+
+form div:first-child input {
+    width: 15rem;
+}
+
+form div:nth-child(2) {
+    margin-top: 1rem;
+}
+
+
+form div:nth-child(2) input {
+    width: 15rem;
+}
+
+.form-control {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 .task-list {
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
 }
 
 .task-item {
+    width: 85vw;
     background-color: rgba(236, 236, 236, 0.5);
     padding: 1rem;
     border-left: 5px solid lightgreen;
@@ -10,12 +49,12 @@
 }
 
 .indice {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
 .task-item div div h6 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .task-item div div p {
@@ -31,42 +70,159 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+
+
+@media only screen and (min-width: 450px) {
+
     
-    .task-list {
-        padding: 1rem 2.5rem;
+    .container button {
+        color: white;
+        display: inline;
+        width: 6rem;
+        height: 2.5rem;
+        margin-top: 1.5rem;
     }
 
-    .task-item {
-        width: 18rem;
+    form div:first-child input {
+        width: 20rem;
     }
-}
 
-@media only screen and (max-width: 450px) {
-
+    form div:nth-child(2) input {
+        width: 20rem;
+    } 
+    
+    
     .task-list {
         padding: 1rem 1rem;
     }
 
     .task-item {
-        width: 15rem;
+        width: 65vw;
     }
 
+
  .indice {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .task-item div div h6 {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .task-item div div p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .task-item label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 }
+
+@media only screen and (min-width: 600px) {
+    
+    .container {
+        width: 30rem;
+    }
+
+    .container button {
+        display: inline;
+        width: 6rem;
+        height: 2.3rem;
+        margin-top: 1.5rem;
+    }
+
+    form div {
+        margin-left: 2rem;
+    }
+    
+
+
+    .task-list {
+        padding: 1rem 2.5rem;
+    }
+
+    .task-item {
+        width: 70vw;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .container {
+        width: 45rem;
+        max-width: 100%;
+        margin-top: 5rem;
+        padding: 2rem 1rem;
+        border: 5px solid lightgreen;
+        border-radius: 6px;
+    }
+    
+    .container button {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: white;
+        height: 2.5rem;
+        background-color: green;
+    }
+    
+    form div input {
+        margin-top: 0rem;
+    }
+    
+    
+    form div {
+        margin-left: 3rem;
+    }
+    
+
+    form div:first-child input {
+        width: 15rem;
+    }
+
+    form div:nth-child(2) input {
+        width: 15rem;
+    } 
+
+    form div:nth-child(2) {
+        margin-top: 0rem;
+    }
+
+    .form-control {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    
+    }
+    
+    
+    .task-list {
+        padding: 1rem 3rem;
+    }
+    
+    .task-item {
+        width: 90vw;
+        background-color: rgba(236, 236, 236, 0.5);
+        padding: 1rem;
+        border-left: 5px solid lightgreen;
+        margin-bottom: 1rem;
+    }
+    
+    .indice {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+    .task-item div div h6 {
+        font-size: 1.2rem;
+    }
+    
+    .task-item div div p {
+        font-size: 0.9rem;
+    }
+    
+
+}
+
+
+
